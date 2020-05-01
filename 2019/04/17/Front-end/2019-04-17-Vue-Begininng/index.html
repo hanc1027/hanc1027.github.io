@@ -1,0 +1,389 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="renderer" content="webkit"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/assets/img/bowatu.JPG?v=2.0.0-rc.0" type="image/png" sizes="16x16"><link rel="icon" href="/assets/img/bowatu.JPG?v=2.0.0-rc.0" type="image/png" sizes="32x32"><meta name="description" content="Vue.js 是什麼？ 它是JavaScript的一個框架，可以讓我們快速的開發專案，且他具有動態資料處理的特色...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue初階入門教學">
+<meta property="og:url" content="https://hanc1027.github.io/2019/04/17/Front-end/2019-04-17-Vue-Begininng/index.html">
+<meta property="og:site_name" content="柏哇圖生活窟">
+<meta property="og:description" content="Vue.js 是什麼？ 它是JavaScript的一個框架，可以讓我們快速的開發專案，且他具有動態資料處理的特色...">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://hanc1027.github.io/assets/posts_img/20190417/01.png">
+<meta property="article:published_time" content="2019-04-17T02:13:05.000Z">
+<meta property="article:modified_time" content="2020-04-29T00:29:18.150Z">
+<meta property="article:author" content="HanC">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="Vue">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="初學者">
+<meta property="article:tag" content="Vue-CLI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hanc1027.github.io/assets/posts_img/20190417/01.png"><meta name="keywords" content="HanC, 柏哇圖生活窟"><meta name="description" content=""><title>Vue初階入門教學 | 柏哇圖生活窟</title><link ref="canonical" href="https://hanc1027.github.io/2019/04/17/Front-end/2019-04-17-Vue-Begininng/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.0-rc.0"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><script src="https://www.googletagmanager.com/gtag/js?id=UA-140676886-1" async=""></script><script>if (window.location.hostname !== 'localhost') {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'UA-140676886-1');
+}</script><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":false,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"ocean","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: {"colWidth":"220px","gapX":"10px"},
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"複製","copySuccess":"複製成功","copyError":"複製失敗"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首頁</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分類</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">標籤</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-leaf"></i></span><span class="header-nav-menu-item__text">關於</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">找找</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Vue初階入門教學</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">發表於</span><span class="post-meta-item__value">2019-04-17</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新於</span><span class="post-meta-item__value">2020-04-29</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字數統計</span><span class="post-meta-item__value">2k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">閱讀時間</span><span class="post-meta-item__value">12分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">閱讀次數</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body">
+        <h3 id="Vue-js-是什麼？"   >
+          <a href="#Vue-js-是什麼？" class="heading-link"><i class="fas fa-link"></i></a>Vue.js 是什麼？</h3>
+      <ul>
+<li>它是JavaScript的一個框架，可以讓我們快速的開發專案，且他具有動態資料處理的特色，<br>  也無需像原生的JavaScript需透過呼叫DOM元素才可取得元件的值。</li>
+<li><span class="exturl"><a class="exturl__link"   href="https://cn.vuejs.org/v2/guide/#"  target="_blank" rel="noopener">Vue 官方網站</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+
+        <h3 id="第一步先佈置好電腦的環境"   >
+          <a href="#第一步先佈置好電腦的環境" class="heading-link"><i class="fas fa-link"></i></a>第一步先佈置好電腦的環境</h3>
+      <ol>
+<li>因為會使用到git，所以先下載、安裝git的comman line<br> <span class="exturl"><a class="exturl__link"   href="https://git-scm.com/downloads"  target="_blank" rel="noopener">載點</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li>因接下來會使用到<em>npm指令</em>(Node Package Manager)，來安裝及管理我們所有Vue的專案，需先下載、安裝Node.js的套件。<br> <span class="exturl"><a class="exturl__link"   href="https://nodejs.org/en/"  target="_blank" rel="noopener">Node.js載點</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>(下載10.15.3 LTS版本即可) </li>
+<li>安裝完畢後，打開其應用程式(GIT Bash)：<br> (1) <span class="exturl"><a class="exturl__link"   href="https://cli.vuejs.org/zh/"  target="_blank" rel="noopener">Vue CLI 官網</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br> 在GIT GUI輸入以下指令，安裝Vue-CLI的套件(@vue/cli 3.x 版本)： <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g @vue/cli</span><br><span class="line">``` </span><br><span class="line">補充：-g 是指全域安裝  </span><br><span class="line">(2) 因GIT Bash預設開啟位置在 ```C:\Users\[你的User Name]```，所以先切換到桌面的位置：</span><br><span class="line">```bash</span><br><span class="line">$ <span class="built_in">cd</span> Desktop</span><br><span class="line">``` </span><br><span class="line">(3) 接著，開始創建一個Hello-Word專案，  </span><br><span class="line">運行以下命令來創建一个新專案：</span><br><span class="line">```bash</span><br><span class="line">$ vue create hello-world</span><br><span class="line">```  </span><br><span class="line">它會問你一些是否在專案中要安裝的其他dependencies(相依套件)，因為我們現在是先練習，所以按enter，直接進入預設即可。  </span><br><span class="line">完成後，會看到他推荐你的兩行指令：  </span><br><span class="line">```bash</span><br><span class="line">$ <span class="built_in">cd</span> hello-word <span class="comment">#此為切換到專案的目錄下</span></span><br><span class="line">$ npm run serve <span class="comment">#此命令會編譯專案，讓它在本機跑伺服器，大多在 http://localhost:8080/ 的網址下可以看到自己專案跑的情況</span></span><br></pre></td></tr></table></div></figure>
+ 不過我們現在要換成用Visual Studio Code來開啟專案編輯。  </li>
+</ol>
+
+        <h3 id="使用-VS-code-編輯專案"   >
+          <a href="#使用-VS-code-編輯專案" class="heading-link"><i class="fas fa-link"></i></a>使用 VS code 編輯專案</h3>
+      <ol>
+<li><p>GIT Bash中，在同一資料夾下(C:\Users\ [你的User Name] \Desktop)，輸入：</p>
+ <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ code hello-word <span class="comment">#使用Visual Studio 打開整個專案資料夾</span></span><br></pre></td></tr></table></div></figure>
+<p> 打開後，應該會呈這個狀態<br> <img src="/assets/posts_img/20190417/01.png" alt="hello-word專案在vs code">  </p>
+</li>
+<li><p>了解專案架構：<br> (1) node_modules:各dependencies存放的資料夾，每當我們在GIT Bash下執行 <code>npm install [dependencies 的名字]</code>時，npm就會把我們安裝的依賴存放在這個資料夾，而此資料夾是不必存入git的追蹤的，因為它的總檔案大小太大。<br> (2) public:我自己目前是很少用到他，所以可以參考官網資料。 <span class="exturl"><a class="exturl__link"   href="https://cli.vuejs.org/zh/guide/build-targets.html#应用"  target="_blank" rel="noopener">public 官網參考</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br> (3) src: 開發最重要的資料夾，大部分的元件，網頁的編輯檔都在這個資料夾操作。<br> 底下包含了：</p>
+<ol>
+<li><p>assets:放置生成的静態資源 (js、css、img、fonts)  </p>
+</li>
+<li><p>components:放置元件。網頁上所看到的任何都是一個個元件所組成的，例如一個Navbar、Container、Footer，他們都是元件，而元件就像積木，讓我們可以堆疊在一個網頁上，做出我們想要的效果。  </p>
+</li>
+<li><p>App.vue:在此專案中，是網頁的主頁，以路由來講：”/“，就是根目錄。  </p>
+</li>
+<li><p>main.js:掛載router(路由)、store(Vuex會使用到的)的檔案，其餘的我也還不是很熱。  </p>
+<p>(4) .gitignore: git在追蹤(git add)及提交(git commit)時，會被忽略的檔案，因為有些檔案只有在開發時才會使用到，無需傳到網路上。且這樣才不會造成我們在上傳檔案時，花太多時間在很大的檔案上，例如：node_modules就預設在.gitignore裡。<br>(5) babel.config.js:<span class="exturl"><a class="exturl__link"   href="https://cli.vuejs.org/zh/config/#babel"  target="_blank" rel="noopener">babel.config.js參考</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>(6) package.json：它是一種 CommonJS 規定用來描述包的文件，是一個包含 json 格式的說明文件，裡面可以定義相依的相關套件以及應用程式的資訊，可以從 <span class="exturl"><a class="exturl__link"   href="https://docs.npmjs.com/files/package.json"  target="_blank" rel="noopener">npm-package.json</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> 網頁了解到，他基本可以定義 應用程式名稱、版本、描述、關鍵字、授權、貢獻者、維護者、腳本等其他，還有 Node.js 最重要的就是相依套件，dependencies 是以套件名稱和版本號組成的。<br>前面有提過node_modules資料夾不會存入git，那當我們下載別人git的project下來執行時，是不是就會因為我們沒有相依套件而不能執行呢？<br>這時，就是package.json發揮的其中一個效用，當我們在專案的目錄下執行<code>$ npm install</code>，npm就會自己到package.json去看這個專案需要什麼套件，進而產生node_modules，幫我們把套件存入。<br><span class="exturl"><a class="exturl__link"   href="http://souffle77-blog.logdown.com/posts/1316300-nodejs-package-json"  target="_blank" rel="noopener">package.json 參考文件</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>(7) README.md：專案的說明檔。預設都是專案安裝、執行、建置網頁的指令，這些指令都要在專案的目錄下執行才有用喔!<br>解釋指令：  </p>
+</li>
+<li><p>npm install：安裝套件。<code>$ npm install [套件名]</code>  </p>
+</li>
+<li><p>npm run serve：在本機端執行網頁，讓開發者可以看到程式編寫後的效果。可以先執行這個指令，再開始編寫程式，每當你的專案一有變更，網頁也會同步變更，若程式有錯，他也會顯示錯誤處在網頁上。  </p>
+</li>
+<li><p>npm run build：將專案打包成一個靜態的網頁，讓開發者可以發佈到網路上。執行這個指令後，會在專案中產生<em>dist</em>資料夾，靜態的網頁就是包含在這一個資料夾。  </p>
+<p>=檔案架構就把目前會用到的先介紹=</p>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="3">
+<li><p>檔案內容介紹<br> (1) 先進入 src &gt; App.vue  </p>
+<ul>
+<li>在網路的世界，要把全部的東西看成一個個的元件(components)，所以你不會在vue裡看熟悉的.html，而是一個個.vue所組成的元件，因此我們先來看根元件App.vue。  </li>
+<li>.vue裡有三大重要的tag，分別是 <em><code>&lt;template&gt; &lt;script&gt; &lt;style&gt;</code></em> <ul>
+<li><code>&lt;template&gt;</code>：包在template裡面的DOM元素就是我們熟悉的html格式，能看到<code>&lt;div&gt; &lt;img&gt;</code>等，在template還有重要的一點，全部的東西，一定要用一個div把他們全部包住，這是vue的規定。<br>這時你可能會看到有一個你從來都沒看過的DOM元素<code>&lt;HelloWorld&gt;</code>，這就是開發者自定的component，而這個component從哪裡來呢？<br>往下看到<code>&lt;script&gt;</code>的部分，有沒有看到<figure class="highlight js"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> HelloWorld <span class="keyword">from</span> <span class="string">'./components/HelloWorld.vue'</span></span><br></pre></td></tr></table></div></figure>
+這一行就是從components資料夾中的HelloWorld.vue取得元件，然後輸入到App.vue裡一個名為HelloWorld的Tag。<br>但除了import外，我們還需要註冊這個元件，App.vue他才會認得HelloWorld這個元件。再往下看，  <figure class="highlight js"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">        name: <span class="string">'app'</span>,</span><br><span class="line">        <span class="comment">//components這一段就是在註冊HelloWorld元件</span></span><br><span class="line">        components: &#123;</span><br><span class="line">            HelloWorld <span class="comment">//此名字要跟上面import後接的名字一樣</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    - `</span><span class="string">``</span>&lt;script&gt;<span class="string">``</span><span class="string">`：使用到的js程式碼包含在這裡面。目前看到的屬性只有name及components兩者，往後會再學到data()、methods、props等很多的屬性值，這都是使用JavaScript構成。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    - `</span><span class="string">``</span>&lt;style&gt;<span class="string">``</span><span class="string">`：css放置的地方。若看到的是`</span><span class="string">``</span>&lt;style scoped&gt;<span class="string">``</span><span class="string">`，代表css的作用域只限於現在這一個.vue檔，若只有`</span><span class="string">``</span>&lt;style&gt;<span class="string">``</span><span class="string">`，則會作用於整個專案。  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">(2)  src &gt; HelloWorld.vue  </span></span><br><span class="line"><span class="string">- 剛剛在App.vue是不是有看到 **import HelloWorld from './components/HelloWorld.vue'** ，那現在我們就要來看它到底import了長什麼樣的元件。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- 首先看到的就是`</span><span class="string">``</span>&lt;template&gt;<span class="string">``</span><span class="string">`，再來是前面提到的，template裡一定要用一個div包住全部的tag，再往下一行是</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>html</span><br><span class="line"> &lt;h1&gt;&#123; &#123; msg &#125; &#125;&lt;<span class="regexp">/h1&gt; &lt;--! 雙大括號兩邊各自要連在一起 --&gt;</span></span><br></pre></td></tr></table></div></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p> <strong>{ { } }</strong>：這裡看到雙大括號，他是Vue.js裡取得JS變數的方法，這個方法可以讓JS與HTML裡的資料是同步的。<br> 那上面的 <em>msg</em> 又是哪來的呢？往下拉到<code>&lt;script&gt;</code>的地方</p>
+ <figure class="highlight js"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    name: <span class="string">'HelloWorld'</span>,</span><br><span class="line">    props: &#123;</span><br><span class="line">        msg: <span class="built_in">String</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p> 看到新的屬性了 – props，這是子元件接父元件的屬性，父元件就是App.vue。回到 src &gt; App.vue &gt; <code>&lt;template&gt;</code> &gt; <code>&lt;HelloWorld&gt;</code></p>
+ <figure class="highlight html"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">HelloWorld</span> <span class="attr">msg</span>=<span class="string">"Welcome to Your Vue.js App"</span>/&gt;</span></span><br></pre></td></tr></table></div></figure>
+<p> <code>&lt;HelloWorld&gt;</code>中的msg 與 HelloWorld.vue &gt; props 中的msg是指同一個變數，從父元件(App.vue)傳一個字串 “Welcome to Your Vue.js App” 到子元件(HelloWorld.vue)props的msg去接這個字串。而後再，這裡印出字串。</p>
+</li>
+</ol>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 耶! 你看到最後了哦~ ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://hanc1027.github.io">HanC</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文連結: </span><span class="copyright-link__value"><a href="https://hanc1027.github.io/2019/04/17/Front-end/2019-04-17-Vue-Begininng/">https://hanc1027.github.io/2019/04/17/Front-end/2019-04-17-Vue-Begininng/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版權聲明: </span><span class="copyright-notice__value">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 許可協議。轉載請註明出處！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://hanc1027.github.io/tags/JavaScript/">JavaScript</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://hanc1027.github.io/tags/Vue/">Vue</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://hanc1027.github.io/tags/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://hanc1027.github.io/tags/%E5%88%9D%E5%AD%B8%E8%80%85/">初學者</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://hanc1027.github.io/tags/Vue-CLI/">Vue-CLI</a></span></div><div class="post-share"><div class="social-share" data-sites="line, facebook, linkedin, twitter, qq, weibo, wechat">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2019/05/25/Eating/2019-05-25-%E5%B0%87%E9%80%B2%E9%85%92/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">[台中美食]將進酒-西區 素食燒烤 一生一定要來嘗試一次</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2017/07/24/Travel/2017-07-24-%E5%AF%A9%E8%A8%88%E6%96%B0%E6%9D%91/"><span class="paginator-prev__text">[台中旅遊]文創老建築-西區 審計新村 文青極愛之地</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="disqus_thread"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目錄</span><span class="sidebar-nav-ov">站點概覽</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue-js-是什麼？"><span class="toc-number">1.</span> <span class="toc-text">
+          Vue.js 是什麼？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步先佈置好電腦的環境"><span class="toc-number">2.</span> <span class="toc-text">
+          第一步先佈置好電腦的環境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用-VS-code-編輯專案"><span class="toc-number">3.</span> <span class="toc-text">
+          使用 VS code 編輯專案</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/assets/img/profile.png" alt="avatar"></div><p class="sidebar-ov-author__text">生活一過，即忘，文字才有能力將記憶永留。</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/hanc1027" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://t.me/hanc1027" target="_blank" rel="noopener" data-popover="Telegram" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-telegram"></i></span></a><a class="sidebar-ov-social-item" href="https://www.instagram.com/han.c.hsu/" target="_blank" rel="noopener" data-popover="Instagram" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-instagram"></i></span></a><a class="sidebar-ov-social-item" href="https://www.youtube.com/channel/UChShAhRiCvBRx1XL2KwsOLw?view_as=subscriber" target="_blank" rel="noopener" data-popover="Youtube" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-youtube"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分類</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">38</div><div class="sidebar-ov-state-item__name">標籤</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知識共享許可協議" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已閱讀了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2017~2020</span><span class="footer__icon"><i class="fas fa-star"></i></span><span>HanC</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 強力驅動</span><span> v4.2.0</span><span class="footer__devider">|</span><span>主題 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">訪問人數</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">瀏覽總量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div><div>Hosted by<a href="https://pages.github.com/" rel="noopener" target="_blank">Github Pages</a></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-angle-double-up"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜尋文章（支援多關鍵詞，請用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="130" alpha="0.8" zIndex="-1"></script><script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script>function initSearch() {
+  var isXML = true;
+  var search_path = 'search.json';
+
+  if (!search_path) {
+    search_path = 'search.xml';
+  } else if (/json$/i.test(search_path)) {
+    isXML = false;
+  }
+
+  var path = '/' + search_path;
+  $.ajax({
+    url: path,
+    dataType: isXML ? 'xml' : 'json',
+    async: true,
+    success: function (res) {
+      var datas = isXML ? $('entry', res).map(function () {
+        // 将 XML 转为 JSON
+        return {
+          title: $('title', this).text(),
+          content: $('content', this).text(),
+          url: $('url', this).text()
+        };
+      }).get() : res;
+      var $input = $('.search-input input');
+      var $result = $('.search-results');
+      // 搜索对象（标题、内容）的权重，影响显示顺序
+      var WEIGHT = { title: 100, content: 1 };
+      var searchPost = function () {
+        var searchText = $input.val().toLowerCase().trim();
+        // 根据空白字符分隔关键字
+        var keywords = searchText.split(/[\s]+/);
+        // 搜索结果
+        var matchPosts = [];
+
+        // 有多个关键字时，将原文字整个保存下来
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        // 防止未输入字符时搜索
+        if (searchText.length > 0) {
+          datas.forEach(function (data) {
+            var isMatch  = false;
+            // 没有标题的文章使用预设的 i18n 变量代替
+            var title = (data.title && data.title.trim()) || '[ 文章無標題 ]';
+            var titleLower = title && title.toLowerCase();
+            // 删除 HTML 标签 和 所有空白字符
+            var content = data.content && data.content.replace(/<[^>]+>/g, '');
+            var contentLower = content && content.toLowerCase();
+            // 删除重复的 /
+            var postURL = data.url && decodeURI(data.url).replace(/\/{2,}/g, '/');
+            // 标题中匹配到的关键词
+            var titleHitSlice = [];
+            // 内容中匹配到的关键词
+            var contentHitSlice = [];
+
+            keywords.forEach(function (keyword) {
+              /**
+              * 获取匹配的关键词的索引
+              * @param {String} keyword 要匹配的关键字
+              * @param {String} text 原文字
+              * @param {Boolean} caseSensitive 是否区分大小写
+              * @param {Number} weight 匹配对象的权重。权重大的优先显示
+              * @return {Array}
+              */
+              function getIndexByword (word, text, caseSensitive, weight) {
+                if (!word || !text) {
+                  return [];
+                };
+
+                var startIndex = 0; // 每次匹配的开始索引
+                var index = -1;     // 匹配到的索引值
+                var result = [];    // 匹配结果
+
+                if (!caseSensitive) {
+                  word = word.toLowerCase();
+                  text = text.toLowerCase();
+                }
+
+                while((index = text.indexOf(word, startIndex)) !== -1) {
+                  var hasMatch = false;
+                  // 索引位置相同的关键词，保留长度较长的
+                  titleHitSlice.forEach(function (hit) {
+                    if (hit.index === index && hit.word.length < word.length) {
+                      hit.word = word;
+                      hasMatch = true;
+                    }
+                  });
+                  startIndex = index + word.length;
+                  !hasMatch && result.push({ index: index, word: word, weight: weight });
+                }
+                return result;
+              }
+              titleHitSlice = titleHitSlice.concat(getIndexByword(keyword, titleLower, false, WEIGHT.title));
+              contentHitSlice = contentHitSlice.concat(getIndexByword(keyword, contentLower, false, WEIGHT.content));
+            });
+
+            var hitTitle = titleHitSlice.length;
+            var hitContent = contentHitSlice.length;
+
+            if (hitTitle > 0 || hitContent > 0) {
+              isMatch = true;
+            }
+            if (isMatch) {
+              ;[titleHitSlice, contentHitSlice].forEach(function (hit) {
+                // 按照匹配文字的索引的递增顺序排序
+                hit.sort(function (left, right) {
+                  return left.index - right.index;
+                });
+              });
+              /**
+              * 给文本中匹配到的关键词添加标记，从而进行高亮显示
+              * @param {String} text 原文本
+              * @param {Array} hitSlice 匹配项的索引信息
+              * @param {Number} start 开始索引
+              * @param {Number} end 结束索引
+              * @return {String}
+              */
+              function highlightKeyword (text, hitSlice, start, end) {
+                if (!text || !hitSlice || !hitSlice.length) {
+                  return;
+                }
+
+                var result = '';
+                var startIndex = start;
+                var endIndex = end;
+                hitSlice.forEach(function (hit) {
+                  if (hit.index < startIndex) {
+                    return;
+                  }
+
+                  var hitWordEnd = hit.index + hit.word.length;
+                  result += text.slice(startIndex, hit.index);
+                  result += '<b>' + text.slice(hit.index, hitWordEnd) + '</b>';
+                  startIndex = hitWordEnd;
+                });
+                result += text.slice(startIndex, endIndex);
+                return result;
+              }
+
+              var postData = {};
+              // 文章总的搜索权重
+              var postWeight = titleHitSlice.length * WEIGHT.title + contentHitSlice.length * WEIGHT.content;
+              // 标记匹配关键词后的标题
+              var postTitle = highlightKeyword(title, titleHitSlice, 0, title.length) || title;
+              // 标记匹配关键词后的内容
+              var postContent;
+              // 显示内容的长度
+              var SHOW_WORD_LENGTH = 200;
+              // 命中关键词前的字符显示长度
+              var SHOW_WORD_FRONT_LENGTH = 20;
+              var SHOW_WORD_END_LENGTH = SHOW_WORD_LENGTH - SHOW_WORD_FRONT_LENGTH;
+
+              // 截取匹配的第一个字符，前后共 200 个字符来显示
+              if (contentHitSlice.length > 0) {
+                var firstIndex = contentHitSlice[0].index;
+                var start = firstIndex > SHOW_WORD_FRONT_LENGTH ? firstIndex - SHOW_WORD_FRONT_LENGTH : 0;
+                var end = firstIndex + SHOW_WORD_END_LENGTH;
+                postContent = highlightKeyword(content, contentHitSlice, start, end);
+              } else { // 未匹配到内容，直接截取前 200 个字符来显示
+                postContent = content.slice(0, SHOW_WORD_LENGTH);
+              }
+              postData.title = postTitle;
+              postData.content = postContent;
+              postData.url = postURL;
+              postData.weight = postWeight;
+              matchPosts.push(postData);
+            }
+          });
+        }
+
+        var resultInnerHtml = '';
+        if (matchPosts.length) {
+          // 按权重递增的顺序排序，使权重大的优先显示
+          matchPosts.sort(function (left, right) {
+            return right.weight - left.weight;
+          });
+          resultInnerHtml += '<ul>';
+          matchPosts.forEach(function (post) {
+            resultInnerHtml += '<li><a class="search-results-title" href="' + post.url + '">';
+            resultInnerHtml += post.title;
+            resultInnerHtml += '</a><div class="search-results-content">';
+            resultInnerHtml += post.content;
+            resultInnerHtml += '</div></li>';
+          });
+          resultInnerHtml += '</ul>';
+        } else {
+          resultInnerHtml += '<div class="search-results-none"><i class="far fa-meh"></i></div>';
+        }
+        $result.html(resultInnerHtml);
+      };
+      $input.on('input', searchPost);
+      $input.on('keyup', function (e) {
+        if (e.keyCode === Stun.utils.codeToKeyCode('Enter')) {
+          searchPost();
+        }
+      });
+    }
+  });
+}
+
+function closeSearch () {
+  $('body').css({ overflow: 'auto' });
+  $('.search-popup').css({ display: 'none' });
+  $('.search-mask').css({ display: 'none' });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  Stun.utils.pjaxReloadLocalSearch = function () {
+    $('.header-nav-search').on('click', function (e) {
+      e.stopPropagation();
+      $('body').css('overflow', 'hidden');
+      $('.search-popup')
+        .velocity('stop')
+        .velocity('transition.expandIn', {
+          duration: 300,
+          complete: function () {
+            $('.search-popup input').focus();
+          }
+        });
+      $('.search-mask')
+        .velocity('stop')
+        .velocity('transition.fadeIn', {
+          duration: 300
+        });
+
+      initSearch();
+    });
+    $('.search-mask, .search-close').on('click', function () {
+      closeSearch();
+    });
+    $(document).on('keydown', function (e) {
+      // Escape <=> 27
+      if (e.keyCode === Stun.utils.codeToKeyCode('Escape')) {
+        closeSearch();
+      }
+    });
+  };
+
+  Stun.utils.pjaxReloadLocalSearch();
+}, false);</script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script>function loadDisqus () {
+  if (!document.getElementById('disqus_thread')) {
+    return;
+  }
+  if (window.DISQUS) {
+    DISQUS.reset({
+      reload: true,
+      config: function () {
+        this.page.url = 'https://hanc1027.github.io/2019/04/17/Front-end/2019-04-17-Vue-Begininng/';
+        this.page.identifier = '2019/04/17/Front-end/2019-04-17-Vue-Begininng/';
+        this.page.title = 'Vue初階入門教學';
+      }
+    });
+  } else {
+    var d = document;
+    var sc = d.createElement('script');
+    var se = d.createElement('script');
+
+    if (true) {
+      sc.src = 'https://bowatu.disqus.com/count.js';
+      sc.id = 'dsq-count-scr';
+      sc.async = true;
+      if (false) {
+        sc.setAttribute('data-pjax', '');
+      }
+      (d.head || d.body).appendChild(sc);
+    }
+    se.src = 'https://bowatu.disqus.com/embed.js';
+    (d.head || d.body).appendChild(se);
+  }
+}
+
+if (false) {
+  loadDisqus();
+} else {
+  window.addEventListener('DOMContentLoaded', loadDisqus, false);
+}</script><script src="/js/utils.js?v=2.0.0-rc.0"></script><script src="/js/stun-boot.js?v=2.0.0-rc.0"></script><script src="/js/scroll.js?v=2.0.0-rc.0"></script><script src="/js/header.js?v=2.0.0-rc.0"></script><script src="/js/sidebar.js?v=2.0.0-rc.0"></script></body></html>
