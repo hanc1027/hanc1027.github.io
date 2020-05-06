@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hanc1027.github.io/2019/09/13/Front-end/2019-09-13-VueHybridAppInit/</loc>
+    
+    <lastmod>2020-05-06T11:02:13.574Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hanc1027.github.io/about/index.html</loc>
     
     <lastmod>2020-05-01T07:58:08.604Z</lastmod>
@@ -54,13 +61,6 @@
     <loc>https://hanc1027.github.io/2020/05/01/Eating/2020-05-01-Hao-2/</loc>
     
     <lastmod>2020-05-01T01:48:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hanc1027.github.io/2019/09/13/Front-end/2019-09-13-VueHybridAppInit/</loc>
-    
-    <lastmod>2020-04-29T00:30:30.287Z</lastmod>
     
   </url>
   
