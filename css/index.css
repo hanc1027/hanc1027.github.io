@@ -2257,13 +2257,13 @@ kbd {
   left: 0;
 }
 .mode-track-moon::before {
-  content: '🏴';
+  content: '🌜';
 }
 .mode-track-sun {
   right: 0;
 }
 .mode-track-sun::before {
-  content: '💡';
+  content: '☀️';
 }
 .mode-thumb {
   position: absolute;
@@ -2289,6 +2289,9 @@ kbd {
   width: 0;
   height: 0;
 }
+.post-share {
+  margin: 0 0 1rem;
+}
 .gallery img {
   margin-bottom: 10px;
   width: 220px;
@@ -2305,6 +2308,18 @@ kbd {
 }
 .footer .exturl__icon {
   color: #fff;
+}
+.comments {
+  margin: 1.5rem 0 0;
+  width: 100%;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  background-color: var(--color-card);
+  float: right;
+}
+#disqus_thread {
+  width: 100%;
+  background-color: #fff;
 }
 .copy-button {
   position: absolute;
@@ -2592,6 +2607,18 @@ kbd {
 .friends-plugin__item-info__intro {
   font-size: 0.9em;
   color: #999;
+}
+.busuanzi-siteuv__icon,
+.busuanzi-sitepv__icon,
+.busuanzi-siteuv__info,
+.busuanzi-sitepv__info,
+.busuanzi-siteuv__value,
+.busuanzi-sitepv__value {
+  margin: 0 2px;
+}
+.busuanzi > span:nth-child(2)::before {
+  content: '|';
+  margin: 0 10px;
 }
 @media (min-width: 1138px) {
   .header-nav-inner {
