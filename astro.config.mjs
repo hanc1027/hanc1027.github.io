@@ -27,6 +27,7 @@ function customRehypeLazyLoadImage() {
   }
 }
 
+// TODO: 上站前，重新配置符合的內容
 export default defineConfig({
   site: 'https://astro-yi-nu.vercel.app',
   integrations: [sitemap(), tailwind(), solid(), expressiveCode({

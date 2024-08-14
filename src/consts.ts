@@ -16,12 +16,12 @@
  * beian {string} Chinese policy
  */
 export const site = {
-  title: 'Astro Theme Yi', // required
-  favicon: '/favicon.svg', // required
-  description: 'Welcome to my independent blog website! ',
-  author: "Astro-Yi", // required
-  avatar: '/avatar.png', // required
-  motto: 'Actions speak louder than words.',
+  title: 'Bowatu\'s Blog',
+  favicon: '/favicon.PNG',
+  description: '生活、前端、WLB',
+  author: "Bowatu",
+  avatar: '/avatar.PNG',
+  motto: '文字除了記錄，還有傳遞價值',
   url: '',
   recentBlogSize: 5,
   archivePageSize: 25,
