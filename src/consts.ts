@@ -103,7 +103,7 @@ export const infoLinks = [
   {
     icon: 'ri-telegram-fill',
     name: 'telegram',
-    outlink: 'xxxxxxx',
+    outlink: 'https://t.me/hanc1027',
   },
   // {
   //   icon: 'ri-twitter-fill',
@@ -113,12 +113,12 @@ export const infoLinks = [
   {
     icon: 'ri-instagram-fill',
     name: 'instagram',
-    outlink: 'xxxxxxx',
+    outlink: 'https://www.instagram.com/han.c.hsu?igsh=MWZ4Nnl5Z256enhp&utm_source=qr',
   },
   {
     icon: 'ri-github-fill',
     name: 'github',
-    outlink: 'xxxxxxx',
+    outlink: 'https://github.com/hanc1027',
   },
   // {
   //   icon: 'ri-rss-fill',
