@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import 'dayjs/locale/zh-tw'; // 繁體中文
 import advancedFormat from 'dayjs/plugin/advancedFormat'
 import utc from "dayjs/plugin/utc";
 import {t} from '../i18n/utils';

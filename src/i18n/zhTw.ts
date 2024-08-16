@@ -1,4 +1,4 @@
-export  const en = {
+export  const zhTw = {
   'aside.caution': 'Caution',
   'aside.danger':'Danger',
   'aside.note': 'Note',
@@ -27,9 +27,9 @@ export  const en = {
   'message.welcomeTips': 'Leave a footprint!',
   'pagination.total':'Total',
   'pagination.unit': 'Pages',
-  'post.dateFormat': 'Do MMMM YYYY',
-  'post.posted': 'Posted',
-  'post.lastUpdated': 'Updated',
+  'post.dateFormat': 'YYYY年 MM月 DD日',
+  'post.posted': '發佈',
+  'post.lastUpdated': '更新',
   'search.labelOne':'Viewing articles under the ',
   'search.labelTwo':'',
   'search.placeholder': 'Enter title or abstract keywords',
@@ -42,6 +42,6 @@ export  const en = {
   'sidebar.tags': 'Tags',
   'sidebar.uncategorized': 'uncategorized',
   'title.draft': 'draft',
-  'title.minutes':' Minutes',
-  'title.words':' Words'
+  'title.minutes':' 分鐘',
+  'title.words':' 字'
 }

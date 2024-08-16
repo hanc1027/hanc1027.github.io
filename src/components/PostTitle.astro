@@ -3,67 +3,83 @@ import {formatDate} from "../utils/formatDate";
 import {dealLabel} from "../utils/dealLabel";
 import {t} from '../i18n/utils'
 const {title, date, category, tags, lastModified = '', draft = false, readingTime = {}} = Astro.props
+
+const mrOfIcon = 'mr-2';
 ---
 
 <div class="border-b-1">
   <!-- title -->
   <h1 class="break-all text-xl font-bold">{title}</h1>
 
-  <div class="flex flex-wrap items-center my-2 space-x-2">
+  <div class="flex flex-col my-2 pl-2">
     <!-- date -->
     {
       date && (
-        <i class="ri-calendar-2-fill"/>
-        <div class="tag">{formatDate(date)}</div>
-      )
-    }
-
-    <!-- draft -->
-    {
-      draft &&
-      <>
-        <div class="divider-vertical"/>
-        <i class="ri-git-pr-draft-line"/>
-        <div>{t('title.draft')}</div>
-      </>
-    }
-
-    <!-- category -->
-    {
-      category && dealLabel(category).filter(item => item !== 'uncategorized').map((categoryName) => (
-        <div class="divider-vertical"/>
-        <i class="ri-folder-3-line"/>
-        <a href={"/category/" + categoryName} class="text-wrap break-all  hover:text-skin-active cursor-pointer">{categoryName}</a>
-      ))
-    }
-
-    <!-- tag -->
-    {
-      tags && dealLabel(tags).map((tagName) => (
-        <div class="divider-vertical"/>
-        <i class="ri-price-tag-3-line"/>
-        <a href={"/tags/" + tagName} class="text-wrap break-all hover:text-skin-active cursor-pointer">{tagName}</a>
-      ))
-    }
-
-    <!-- update -->
-    {
-      lastModified && (
-        <div class="divider-vertical"/>
-        <i class="ri-calendar-check-fill"></i>
-        <div class="tag">{t('post.lastUpdated')}：{lastModified}</div>
+      <div class="flex items-center flex-wrap">
+        <i class={`ri-calendar-2-fill ${mrOfIcon}`}/>
+        <div class="tag">{t('post.posted')}：{formatDate(date)}</div>
+        <!-- update -->
+     {
+        lastModified && (
+          <div class="divider-vertical" />
+          <div class="flex items-center">
+            <div class="tag">{t('post.lastUpdated')}：{lastModified}</div>
+          </div>
+        )
+      }
+      </div>
       )
     }
 
     <!-- minutes -->
     {
       readingTime.minutes && (
-        <div class="divider-vertical"/>
-        <i class="ri-hourglass-fill"/>
+        <div class="flex items-center">
+        <i class={`ri-time-line ${mrOfIcon}`}/>
         <div class="tag">{Math.ceil(readingTime.minutes)}{t('title.minutes')}</div>
         <div class="divider-vertical"/>
         <div class="tag">{readingTime.words}{t('title.words')}</div>
+        </div>
       )
+    }
+
+    <!-- draft -->
+    {
+      draft &&
+      <div class="flex items-center">
+        <i class={`ri-git-pr-draft-line ${mrOfIcon}`} />
+        <div>{t('title.draft')}</div>
+      </div>
+    }
+
+    <!-- category -->
+    {
+      category &&
+      <div class="flex items-center">
+        <i class={`ri-folder-3-line ${mrOfIcon}`}/>
+        {dealLabel(category).filter(item => item !== 'uncategorized').map((categoryName,index) => (
+          <a href={"/category/" + categoryName} class="text-wrap break-all  hover:text-skin-active cursor-pointer">{categoryName}</a>
+          <span class="px-2">
+            {category.length > 1 && index !== category.length - 1 && '/'}
+          </span>
+      ))}
+      </div>
+    }
+
+    <!-- tag -->
+    {
+
+      tags && <div class="flex items-center flex-wrap">
+        <i class={`ri-price-tag-3-line ${mrOfIcon}`}/>
+        {
+        dealLabel(tags).map((tagName, index) => (
+        <a href={"/tags/" + tagName} class="text-wrap break-all hover:text-skin-active cursor-pointer">{tagName}</a>
+        <span class="pr-2">
+            {tags.length > 1 && index !== tags.length - 1 && ','}
+          </span>
+      ))
+        }
+      </div>
     }
   </div>
 </div>

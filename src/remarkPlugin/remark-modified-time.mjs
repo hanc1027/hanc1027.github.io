@@ -19,7 +19,7 @@ export function remarkModifiedTime() {
     const filepath = file.history[0];
     const result = statSync(filepath);
     file.data.astro.frontmatter.lastModified = formatDate(result.mtime)
-    // 获取文章字数和阅读时长
+    // 獲取文章字數和閱讀時間
     const textOnPage = toString(tree);
     // readingTime.text 会以友好的字符串形式给出阅读时间，例如 "3 min read"。
     file.data.astro.frontmatter.readingTime = getReadingTime(textOnPage,);
