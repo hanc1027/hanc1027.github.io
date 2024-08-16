@@ -16,12 +16,12 @@
  * beian {string} Chinese policy
  */
 export const site = {
-  title: 'Bowatu\'s Blog',
+  title: 'HanC\'s Blog',
   favicon: '/favicon.PNG',
   description: '生活、前端、WLB',
-  author: "Bowatu",
+  author: "HanC",
   avatar: '/avatar.PNG',
-  motto: '文字除了記錄，還有傳遞價值',
+  motto: '文字除了記錄，還有傳遞溫暖',
   url: '',
   recentBlogSize: 5,
   archivePageSize: 25,
@@ -105,11 +105,11 @@ export const infoLinks = [
     name: 'telegram',
     outlink: 'xxxxxxx',
   },
-  {
-    icon: 'ri-twitter-fill',
-    name: 'twitter',
-    outlink: 'xxxxxxx',
-  },
+  // {
+  //   icon: 'ri-twitter-fill',
+  //   name: 'twitter',
+  //   outlink: 'xxxxxxx',
+  // },
   {
     icon: 'ri-instagram-fill',
     name: 'instagram',
@@ -120,11 +120,11 @@ export const infoLinks = [
     name: 'github',
     outlink: 'xxxxxxx',
   },
-  {
-    icon: 'ri-rss-fill',
-    name: 'rss',
-    outlink: 'xxxxxxx',
-  }
+  // {
+  //   icon: 'ri-rss-fill',
+  //   name: 'rss',
+  //   outlink: 'xxxxxxx',
+  // }
 ]
 
 /**
