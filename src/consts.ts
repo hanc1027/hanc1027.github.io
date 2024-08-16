@@ -18,7 +18,7 @@
 export const site = {
   title: 'HanC\'s Blog',
   favicon: '/favicon.PNG',
-  description: '生活、前端、WLB',
+  description: '文字燃升溫暖，為生活點綴星空',
   author: "HanC",
   avatar: '/avatar.PNG',
   motto: '文字除了記錄，還有傳遞溫暖',
@@ -54,17 +54,17 @@ export const categories = [
   {
     name: "Blog",
     iconClass: "ri-draft-line",
-    href: "/blog/1",
+    href: "/blog",
   },
-  {
-    name: "Feed",
-    iconClass: "ri-lightbulb-flash-line",
-    href: "/feed/1",
-  },
+  // {
+  //   name: "Feed",
+  //   iconClass: "ri-lightbulb-flash-line",
+  //   href: "/feed/1",
+  // },
   {
     name: "Archive",
     iconClass: "ri-archive-line",
-    href: "/archive/1",
+    href: "/archive",
   },
   {
     name: "Message",
