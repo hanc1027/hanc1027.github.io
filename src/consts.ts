@@ -66,11 +66,11 @@ export const categories = [
     iconClass: "ri-archive-line",
     href: "/archive",
   },
-  {
-    name: "Message",
-    iconClass: "ri-chat-1-line",
-    href: "/message",
-  },
+  // {
+  //   name: "Message",
+  //   iconClass: "ri-chat-1-line",
+  //   href: "/message",
+  // },
   {
     name: "Search",
     iconClass: "ri-search-line",

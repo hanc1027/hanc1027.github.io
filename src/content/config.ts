@@ -5,9 +5,11 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional().nullable(),
-    date: z.date(),
     tags: z.array(z.string()).or(z.string()).optional().nullable(),
+    date: z.date(),
     category: z.array(z.string()).or(z.string()).default('uncategorized').nullable(),
+    image: z.string().optional().nullable(),
+    imageAlt: z.string().optional().nullable(),
     sticky: z.number().default(0).nullable(),
     mathjax: z.boolean().default(false).nullable(),
     mermaid: z.boolean().default(false).nullable(),
