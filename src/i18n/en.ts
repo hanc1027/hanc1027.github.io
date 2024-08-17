@@ -30,6 +30,7 @@ export  const en = {
   'post.dateFormat': 'Do MMMM YYYY',
   'post.posted': 'Posted',
   'post.lastUpdated': 'Updated',
+  'post.otherTagTip': 'Other tags',
   'search.labelOne':'Viewing articles under the ',
   'search.labelTwo':'',
   'search.placeholder': 'Enter title or abstract keywords',

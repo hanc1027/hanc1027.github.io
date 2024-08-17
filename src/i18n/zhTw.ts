@@ -30,6 +30,7 @@ export  const zhTw = {
   'post.dateFormat': 'YYYY年 MM月 DD日',
   'post.posted': '發佈',
   'post.lastUpdated': '更新',
+  'post.otherTagTip': '其它標籤',
   'search.labelOne':'Viewing articles under the ',
   'search.labelTwo':'',
   'search.placeholder': 'Enter title or abstract keywords',

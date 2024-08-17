@@ -4,7 +4,6 @@ import {dealLabel} from "../utils/dealLabel";
 import {t} from '../i18n/utils'
 const {title, date, slug, category, tags, sticky = false, draft = false} = Astro.props
 ---
-
 <div class="text-skin-base">
   <!-- title -->
   <div class="flex items-center">
@@ -51,46 +50,45 @@ const {title, date, slug, category, tags, sticky = false, draft = false} = Astro
       <div>
       {
         dealLabel(tags).map((tagName, index) => (
-        <a href={"/tags/" + tagName} class="text-wrap break-all hover:text-skin-active">{tagName}</a>
-        <span>{index < dealLabel(tags).length - 1 && ', '}</span>
-        <span></span>
+        <span>{tagName} {index < dealLabel(tags).length - 1 && ', '}</span>
 
-        <div class="tooltip">{(dealLabel(tags).length > 4 && index === 3 )&& '...'}
-          <span class="tooltiptext">{dealLabel(tags).slice(4,-1)}</span>
-        </div>
-        )).slice(0,4)
+        <span class="tooltip">{(dealLabel(tags).length > 5 && index === 4 )&& '......'}
+          <span class="tooltiptext">{t('post.otherTagTip')}: {dealLabel(tags).slice(5,-1).join(', ')}</span>
+        </span>
+        )).slice(0,5)
       }
+
+
       </div>
     }
   </div>
 </div>
 
-<style>
+<style lang="scss">
 .tooltip {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  border-bottom: 1px black;
-}
 
-/* Tooltip text */
-.tooltip .tooltiptext {
+  &:hover{
+    .tooltiptext {
+      visibility: visible;
+    }
+  }
+  .tooltiptext {
   visibility: hidden;
-  width: 120px;
-  @apply flex flex-col py-1 px-2;
-  background-color: rgba(0, 0, 0, 0.6);
+  width: 160px;
+  padding: 8px 16px !important;
+  background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
 
-  margin-left: 12px;
+  margin-left: 6px;
   position: absolute;
   z-index: 1;
+  }
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
 </style>
