@@ -45,11 +45,51 @@ const {title, date, slug, category, tags, sticky = false, draft = false} = Astro
 
     <!-- tag -->
     {
-      tags && dealLabel(tags).map((tagName) => (
-        <div class="divider-vertical"/>
-        <i class="ri-price-tag-3-line"/>
+      tags &&
+      <div class="divider-vertical"/>
+      <i class="ri-price-tag-3-line"/>
+      <div>
+      {
+        dealLabel(tags).map((tagName, index) => (
         <a href={"/tags/" + tagName} class="text-wrap break-all hover:text-skin-active">{tagName}</a>
-      ))
+        <span>{index < dealLabel(tags).length - 1 && ', '}</span>
+        <span></span>
+
+        <div class="tooltip">{(dealLabel(tags).length > 4 && index === 3 )&& '...'}
+          <span class="tooltiptext">{dealLabel(tags).slice(4,-1)}</span>
+        </div>
+        )).slice(0,4)
+      }
+      </div>
     }
   </div>
 </div>
+
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-bottom: 1px black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
