@@ -7,7 +7,6 @@ updated: {{date}}
 category: [Frontend]
 ---
 
-
 ### Vue.js 是什麼？
 - 它是JavaScript的一個框架，可以讓我們快速的開發專案，且他具有動態資料處理的特色，  
     也無需像原生的JavaScript需透過呼叫DOM元素才可取得元件的值。
