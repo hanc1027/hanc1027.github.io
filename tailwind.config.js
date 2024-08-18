@@ -35,7 +35,7 @@ export default {
     textColor: {
       skin: {
         base: withOpacity("--color-text"),
-        active: withOpacity("--color-text-active")
+        active: withOpacity("--color-text-active"),
       },
     },
 
@@ -59,6 +59,11 @@ export default {
         base: withOpacity('--color-border'),
       },
     },
+    colors:{
+      transparent: 'transparent',
+      current: 'currentColor',
+      alert: '#f44336',
+    },
     extend: {
       colors: {
         custom: {
@@ -72,7 +77,7 @@ export default {
           second: "#d6ccc2",
           third: "#f5ebe0",
           forth: "#e3d5ca",
-          fifth: "#d5bdaf"
+          fifth: "#d5bdaf",
         }
       }
     },
