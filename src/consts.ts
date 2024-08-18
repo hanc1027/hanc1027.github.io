@@ -86,12 +86,12 @@ export const categories = [
         iconClass: 'ri-information-line',
         href: '/about',
       },
-      {
-        name: 'Friends',
-        iconClass: 'ri-user-5-line',
-        href: '/friends',
-        target: '_self',
-      },
+      // {
+      //   name: 'Friends',
+      //   iconClass: 'ri-user-5-line',
+      //   href: '/friends',
+      //   target: '_self',
+      // },
     ]
   }
 ]
