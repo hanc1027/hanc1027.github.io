@@ -28,7 +28,7 @@ function customRehypeLazyLoadImage() {
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-yi-nu.vercel.app',
+  site: 'https://hanc1027.github.io/',
   integrations: [sitemap(), tailwind(), solid(), expressiveCode({
     plugins: [pluginLineNumbers(), pluginCollapsibleSections()],
     themes: ["github-dark", "github-light"],
