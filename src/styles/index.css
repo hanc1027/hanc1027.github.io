@@ -163,6 +163,7 @@ menu {
   background-color: inherit;
 }
 
+
 .markdown-body p,
 li,
 ul,
@@ -203,6 +204,10 @@ menu {
 .markdown-body img {
   /* 修改图片居中 */
   /* margin: 0 auto; */
+  padding: 4px;
+  border: solid 0.5px #ccc;
+  border-radius: 3px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 /* 修改滚动条样式 */
