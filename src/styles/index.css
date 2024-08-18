@@ -202,12 +202,32 @@ menu {
 }
 
 .markdown-body img {
-  /* 修改图片居中 */
-  /* margin: 0 auto; */
   padding: 4px;
   border: solid 0.5px #ccc;
   border-radius: 3px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.markdown-body .post-img {
+  width: 100%;
+}
+
+@media (min-width: 960px) {
+  .markdown-body .post-img {
+    width: 50%;
+  }
+}
+
+.markdown-body .post-mul-img {
+  width: 100%;
+}
+
+@media (min-width: 960px) {
+  .markdown-body .post-mul-img {
+    width: 255px;
+    height: 195px;
+    object-fit: cover;
+  }
 }
 
 /* 修改滚动条样式 */
