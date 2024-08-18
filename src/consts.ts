@@ -20,7 +20,7 @@ export const site = {
   favicon: '/favicon.PNG',
   description: '文字燃升溫暖，為生活點綴星空',
   author: "HanC",
-  avatar: '/avatar.PNG',
+  avatar: '/avatar.png',
   motto: '文字除了記錄，還有傳遞溫暖',
   url: 'https://hanc1027.github.io/',
   recentBlogSize: 5,
