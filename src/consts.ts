@@ -22,7 +22,7 @@ export const site = {
   author: "HanC",
   avatar: '/avatar.PNG',
   motto: '文字除了記錄，還有傳遞溫暖',
-  url: '',
+  url: 'https://hanc1027.github.io/',
   recentBlogSize: 5,
   archivePageSize: 25,
   postPageSize: 10,
