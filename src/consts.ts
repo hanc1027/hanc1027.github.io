@@ -48,7 +48,7 @@ export const config = {
  * name {string}
  * iconClass {string} icon style
  * href {string}  link url
- * target {string} optional "_self|_blank" open in current window / open in new window
+ * target {string} optional "_self|_" open in current window / oblankpen in new window
  */
 export const categories = [
   {

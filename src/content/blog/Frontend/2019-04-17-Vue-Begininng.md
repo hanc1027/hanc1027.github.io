@@ -5,6 +5,7 @@ tags: [JavaScript, Vue, Vue-CLI, 前端, 初學者]
 date:   2019-04-17 10:13:05
 updated: {{date}}
 category: [Frontend]
+comments: true
 ---
 
 ### Vue.js 是什麼？
