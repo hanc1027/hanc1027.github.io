@@ -99,6 +99,3 @@ Telegram是一個跨平台(Linux、Mac OS、Windows、iOS、Android…)的即時
 ### 第三方手機軟體
 1) iOS:[Nicegram](https://apps.apple.com/us/app/nicegram/id1457369322)
 2) Android:[Plus Messenger](https://play.google.com/store/apps/details?id=org.telegram.plus&hl=zh_TW)
-
-### 回主目錄
-[回主目錄](../2020-04-29-telegram新手懶人包)
