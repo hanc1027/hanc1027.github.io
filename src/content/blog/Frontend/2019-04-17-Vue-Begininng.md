@@ -5,6 +5,7 @@ tags: [JavaScript, Vue, Vue-CLI, 前端, 初學者]
 date:   2019-04-17 10:13:05
 updated: {{date}}
 category: [Frontend]
+image: https://github.com/hanc1027/HanC_Blog_Assets/blob/main/20190417-Vue-Begining/01.png?raw=true
 comments: true
 ---
 
@@ -49,7 +50,7 @@ comments: true
     $ code hello-word #使用Visual Studio 打開整個專案資料夾
     ```
     打開後，應該會呈這個狀態  
-    ![hello-word專案在vs code](https://scontent-tpe1-1.xx.fbcdn.net/v/t39.30808-6/455738245_122101380044477369_5935756592943078571_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=f727a1&_nc_ohc=tKiKlfC_LdsQ7kNvgEdivI2&_nc_ht=scontent-tpe1-1.xx&oh=00_AYAVJLogMQO87MXGAl3AqT4hEwbQfxMbCXdIPs4KRKYzTQ&oe=66C763FE)  
+    ![hello-word專案在vs code](https://github.com/hanc1027/HanC_Blog_Assets/blob/main/20190417-Vue-Begining/01.png?raw=true)  
 
 2. 了解專案架構：  
     1. node_modules:各dependencies存放的資料夾，每當我們在GIT Bash下執行 ```npm install [dependencies 的名字]```時，npm就會把我們安裝的依賴存放在這個資料夾，而此資料夾是不必存入git的追蹤的，因為它的總檔案大小太大。  
