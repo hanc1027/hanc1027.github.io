@@ -101,4 +101,4 @@ Telegram是一個跨平台(Linux、Mac OS、Windows、iOS、Android…)的即時
 2) Android:[Plus Messenger](https://play.google.com/store/apps/details?id=org.telegram.plus&hl=zh_TW)
 
 ### 回主目錄
-[回主目錄](https://hanc1027.github.io/2020/02/21/App/Telegram懶人包/2020-04-29-Telegram新手懶人包/)
+[回主目錄](../2020-04-29-telegram新手懶人包)
