@@ -41,7 +41,7 @@ let tagCount = getCountByTagName(blogs);
     {
       categories.map((category) => (
         <div class="py-2">
-          <a class=" hover:text-skin-active" href={category.href}>
+          <a class=" hover:text-skin-active" href={category.href === "/blog" ? "/" : category.href}>
             <i class={category.iconClass}/>
             <span>{category.name}</span>
           </a>
