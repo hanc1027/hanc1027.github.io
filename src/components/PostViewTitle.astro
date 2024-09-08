@@ -53,7 +53,7 @@ const {title, date, slug, category, tags, sticky = false, draft = false} = Astro
         <span>{tagName} {index < dealLabel(tags).length - 1 && ', '}</span>
 
         <span class="tooltip">{(dealLabel(tags).length > 5 && index === 4 )&& '......'}
-          <span class="tooltiptext">{t('post.otherTagTip')}: {dealLabel(tags).slice(5,-1).join(', ')}</span>
+          <span class="tooltiptext">{t('post.otherTagTip')}: {dealLabel(tags).slice(5).join(', ')}</span>
         </span>
         )).slice(0,5)
       }
