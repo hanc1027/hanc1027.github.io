@@ -1,7 +1,7 @@
 ---
 title:  Vue初階入門教學
 description: Vue.js 是什麼？ 它是JavaScript的一個框架，可以讓我們快速的開發專案，且他具有動態資料處理的特色... 
-tags: [JavaScript, Vue, Vue-CLI, 前端, 初學者]
+tags: [JavaScript, Vue, 前端]
 date:   2019-04-17 10:13:05
 updated: {{date}}
 category: [Frontend]

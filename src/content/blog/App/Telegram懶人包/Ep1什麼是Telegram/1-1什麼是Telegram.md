@@ -1,7 +1,7 @@
 ---
 title:  "[Telegram懶人包]1-1 什麼是Telegram (*´･д･)?"
 description: "什麼是Telegram (*´･д･)?"
-tags: [Telegram, Line, app, 通訊軟體, 新手, 入門]
+tags: [Telegram, app, 入門]
 date: 2020-02-21 10:25:33
 category: [App]
 comments: true

@@ -1,7 +1,7 @@
 ---
 title:  Vue Hybrid App 專案初始化
 description: 誰說手機App只能使用原生語言開發呢？我們就來使用原本拿來網頁的JavaScript來寫出一個令人驚豔的App...
-tags: [JavaScript, Vue, Cordova, 前端, 初學者, Capacitor, Hybrid, iOS, Android, Plugins]
+tags: [JavaScript, Vue, 前端]
 date:   2019-09-13 15:20:05
 category: [Frontend]
 comments: true

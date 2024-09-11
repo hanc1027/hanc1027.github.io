@@ -1,7 +1,7 @@
 ---
 title: 讓你想開啟Telegram之門的原因
 description: 這應該要從兩三年前說起，當時還正享受Line的總總功能時，我朋友突然跟我說...
-tags: [Telegram, Line, app, 通訊軟體, 新手, 入門]
+tags: [Telegram, app, 入門]
 date: 2019-11-16 18:18:15
 category: [App]
 comments: true
