@@ -19,14 +19,14 @@ const mrOfIcon = 'mr-2';
         <i class={`ri-calendar-2-fill ${mrOfIcon}`}/>
         <div class="tag">{t('post.posted')}：{formatDate(date)}</div>
         <!-- update -->
-     {
+     {/* {
         lastModified && (
           <div class="divider-vertical" />
           <div class="flex items-center">
             <div class="tag">{t('post.lastUpdated')}：{lastModified}</div>
           </div>
         )
-      }
+      } */}
       </div>
       )
     }
@@ -63,23 +63,24 @@ const mrOfIcon = 'mr-2';
             {category.length > 1 && index !== category.length - 1 && '/'}
           </span>
       ))}
+
+      <!-- tag -->
+      {
+
+        tags && <div class="flex items-center flex-wrap">
+          <i class={`ri-price-tag-3-line ${mrOfIcon}`}/>
+          {
+          dealLabel(tags).map((tagName, index) => (
+          <a href={"/tags/" + tagName} class="text-wrap break-all hover:text-skin-active cursor-pointer">{tagName}</a>
+          <span class="pr-2">
+              {tags.length > 1 && index !== tags.length - 1 && ','}
+            </span>
+        ))
+          }
+        </div>
+      }
       </div>
     }
 
-    <!-- tag -->
-    {
-
-      tags && <div class="flex items-center flex-wrap">
-        <i class={`ri-price-tag-3-line ${mrOfIcon}`}/>
-        {
-        dealLabel(tags).map((tagName, index) => (
-        <a href={"/tags/" + tagName} class="text-wrap break-all hover:text-skin-active cursor-pointer">{tagName}</a>
-        <span class="pr-2">
-            {tags.length > 1 && index !== tags.length - 1 && ','}
-          </span>
-      ))
-        }
-      </div>
-    }
   </div>
 </div>
