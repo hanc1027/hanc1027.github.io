@@ -24,11 +24,9 @@ function customRehypeLazyLoadImage() {
   };
 }
 
-// TODO: 上站前，重新配置符合的內容
-
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://hanc1027.github.io/',
+  site: 'https://hanchsu.me/',
   integrations: [sitemap(), tailwind(), solid(), expressiveCode({
     plugins: [pluginLineNumbers(), pluginCollapsibleSections()],
     themes: ["github-dark", "github-light"],
