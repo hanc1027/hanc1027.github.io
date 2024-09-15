@@ -4,7 +4,7 @@ description: "什麼是Telegram (*´･д･)?"
 tags: [Telegram, app, 入門]
 date: 2020-02-21 10:25:33
 category: [App]
-comments: true
+
 ---
 
 `p.s.這裡的介紹都會以Mac OS 或 iOS 為主要操作系統，所以少許的功能會略有不同`

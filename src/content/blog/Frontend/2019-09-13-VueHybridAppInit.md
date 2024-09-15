@@ -4,7 +4,7 @@ description: 誰說手機App只能使用原生語言開發呢？我們就來使�
 tags: [JavaScript, Vue, 前端]
 date:   2019-09-13 15:20:05
 category: [Frontend]
-comments: true
+
 ---
 
 ### 一個採用 Vue.js 、 Cordova 及 Capacitor 套件而成的 Hybrid App

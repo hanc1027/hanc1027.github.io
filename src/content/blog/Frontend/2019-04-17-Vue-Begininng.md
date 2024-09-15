@@ -6,7 +6,7 @@ date:   2019-04-17 10:13:05
 updated: {{date}}
 category: [Frontend]
 image: https://github.com/hanc1027/HanC_Blog_Assets/blob/main/20190417-Vue-Begining/01.png?raw=true
-comments: true
+
 ---
 
 ### Vue.js 是什麼？
