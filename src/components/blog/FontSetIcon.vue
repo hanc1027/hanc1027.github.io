@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 import FontLSvg from "public/icons/blog/font-l.svg?component";
 import FontMSvg from "public/icons/blog/font-m.svg?component";
 import FontSSvg from "public/icons/blog/font-s.svg?component";
-import { onMounted, onUnmounted, ref, watch } from "vue";
+import { computed, onMounted, onUnmounted, ref, watch } from "vue";
 import { t } from "../../i18n/utils";
 
 // 定義狀態來儲存視窗大小
@@ -75,9 +75,9 @@ onUnmounted(() => {
     </div>
 
     <div class="w-[30px] h-[30px] xl:ml-2">
-      <FontLSvg v-if="fontSize === 'l'" />
-      <FontMSvg v-else-if="fontSize === 'm'" />
-      <FontSSvg v-else />
+      <FontLSvg v-if="fontSize === 'l'" class="text-skin-base" />
+      <FontMSvg v-else-if="fontSize === 'm'" class="text-skin-base" />
+      <FontSSvg v-else class="text-skin-base" />
     </div>
   </div>
 </template>
