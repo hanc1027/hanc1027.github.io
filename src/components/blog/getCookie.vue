@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Cookies from "js-cookie";
-import { onMounted,ref } from 'vue';
+import { onMounted } from 'vue';
 
 const setFontSize = () => {
   let fontSize = Cookies.get("font-size");
