@@ -16,6 +16,7 @@
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/solid-js": "^4.4.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vue": "^4.5.0",
     "@expressive-code/plugin-collapsible-sections": "^0.33.5",
     "@expressive-code/plugin-line-numbers": "^0.33.5",
     "@fancyapps/ui": "^5.0.35",
@@ -26,6 +27,7 @@
     "child_process": "^1.0.2",
     "dayjs": "^1.11.10",
     "hastscript": "^9.0.0",
+    "js-cookie": "^3.0.5",
     "lodash": "^4.17.21",
     "mdast-util-to-string": "^4.0.0",
     "react": "^18.3.1",
@@ -38,7 +40,8 @@
     "tocbot": "^4.25.0",
     "typescript": "^5.4.2",
     "unist-util-remove": "^4.0.0",
-    "unist-util-visit": "^5.0.0"
+    "unist-util-visit": "^5.0.0",
+    "vue": "^3.5.6"
   },
   "devDependencies": {
     "sass": "^1.72.0"

@@ -158,9 +158,36 @@ menu {
   background-color: rgba(var(--color-text), .3);
 }
 
-/* 重写markdown样式 */
+/* 重寫markdown樣式 */
 .markdown-body {
   background-color: inherit;
+  /* 小 */
+  font-size: 100%;
+}
+
+.markdown-body > * {
+  /* 小 */
+  font-size: 16px;
+}
+
+.markdown-body > .hanc-font-medium {
+  /* 中 */
+  font-size: 125%;
+
+}
+.markdown-body.hanc-font-medium  > * {
+   /* 中 */
+  font-size: 18px;
+}
+
+.markdown-body > .hanc-font-large {
+  /* 中 */
+  font-size: 150%;
+
+}
+.markdown-body.hanc-font-large  > * {
+   /* 中 */
+  font-size: 20px;
 }
 
 

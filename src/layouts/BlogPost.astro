@@ -8,6 +8,7 @@ import Toc from '../components/Toc.astro'
 import {comment} from "../consts";
 import ScrollToTop from '../components/ScrollToTop.astro'
 import {t}from '../i18n/utils'
+import GetCookie from '../components/blog/getCookie.vue'
 
 const {frontmatter = {comment: false, donate: false, toc: false, mathjax: false, mermaid: false, title: '', description: '', image: '', imageAlt: ''}} = Astro.props
 ---
@@ -18,6 +19,7 @@ const {frontmatter = {comment: false, donate: false, toc: false, mathjax: false,
 <body class="bg-skin-secondary">
 <Header/>
 <main class="container p-4  pt-20 text-skin-base min-h-full pb-32 relative" id="app">
+  <GetCookie client:only="vue"/>
   <div class="grid grid-cols-4 gap-8">
     <div class="col-span-4 xl:col-span-3 space-y-4">
       <button class="flex items-center text-md cursor-pointer hover:text-skin-active outline-none" style="background-color: inherit;" onclick="history.back()">
@@ -37,6 +39,7 @@ const {frontmatter = {comment: false, donate: false, toc: false, mathjax: false,
         <Toc></Toc>
       }
     </div>
+
     <ScrollToTop></ScrollToTop>
   </div>
   <Footer/>
@@ -47,7 +50,7 @@ const {frontmatter = {comment: false, donate: false, toc: false, mathjax: false,
 
 <script>
   import { Fancybox } from "@fancyapps/ui";
-  import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
   Fancybox.bind("[data-fancybox]");
   // 给所有的a标签添加target属性和不追踪
   const markdownBody = document.querySelector(".markdown-body");

@@ -3,6 +3,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import solid from '@astrojs/solid-js';
+import vue from '@astrojs/vue';
 import { remarkModifiedTime } from "./src/remarkPlugin/remark-modified-time.mjs";
 import { resetRemark } from "./src/remarkPlugin/reset-remark.js";
 import remarkDirective from "remark-directive";
@@ -27,7 +28,7 @@ function customRehypeLazyLoadImage() {
 // https://astro.build/config
 export default defineConfig({
   site: 'https://hanchsu.me/',
-  integrations: [sitemap(), tailwind(), solid(), expressiveCode({
+  integrations: [sitemap(), tailwind(), solid(), vue(), expressiveCode({
     plugins: [pluginLineNumbers(), pluginCollapsibleSections()],
     themes: ["github-dark", "github-light"],
     styleOverrides: {
