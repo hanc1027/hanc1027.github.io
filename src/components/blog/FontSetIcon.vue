@@ -60,7 +60,7 @@ onUnmounted(() => {
 
 <template>
   <div
-    class="flex items-center cursor-pointer hover:opacity-80 group w-[30px] xl:w-auto"
+    class="flex items-center justify-between cursor-pointer hover:opacity-80 group w-[30px] xl:w-auto"
     :title="t('blog.setFontSize')"
     @click="setFontSize"
   >
@@ -74,7 +74,7 @@ onUnmounted(() => {
       }}
     </div>
 
-    <div class="w-[30px] h-[30px] xl:ml-2">
+    <div class="w-[30px] h-[30px]">
       <FontLSvg v-if="fontSize === 'l'" class="text-skin-base" />
       <FontMSvg v-else-if="fontSize === 'm'" class="text-skin-base" />
       <FontSSvg v-else class="text-skin-base" />
