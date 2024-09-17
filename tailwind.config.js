@@ -36,6 +36,7 @@ export default {
       skin: {
         base: withOpacity("--color-text"),
         active: withOpacity("--color-text-active"),
+        altText: withOpacity("--color-alt-text"),
       },
     },
 

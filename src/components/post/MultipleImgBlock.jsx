@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function MultipleImgBlock({imgList, isOriginSize = false, noNewLine=false}) {
+export function MultipleImgBlock({imgList, isOriginSize = false, altText=""}) {
   // 2張圖片時，不縮小
   // 3張圖片時，才縮一樣大小
   // 可自由代入isOriginSize，選擇是否更新大小
@@ -12,6 +12,8 @@ export function MultipleImgBlock({imgList, isOriginSize = false, noNewLine=false
 
   ))}</div>
 
-  {!noNewLine && <br/>}</>;
+  { altText !== "" && <div class="w-full flex justify-center mt-2 text-skin-altText  !text-sm"> {altText} </div>}
+
+  <br/></>;
 }
 
