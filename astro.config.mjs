@@ -12,6 +12,8 @@ import expressiveCode from "astro-expressive-code";
 import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers';
 import { visit } from 'unist-util-visit';
 import { pluginCollapsibleSections } from '@expressive-code/plugin-collapsible-sections';
+import svgLoader from 'vite-svg-loader'
+
 function customRehypeLazyLoadImage() {
   return function (tree) {
     visit(tree, function (node) {
@@ -40,5 +42,10 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkModifiedTime, resetRemark, remarkDirective, remarkAsides({})],
     rehypePlugins: [customRehypeLazyLoadImage]
+  },
+  vite: {
+    plugins: [
+      svgLoader()
+    ]
   }
 });

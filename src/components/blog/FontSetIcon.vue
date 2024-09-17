@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import Cookies from "js-cookie";
+import FontLSvg from "public/icons/blog/font-l.svg?component";
+import FontMSvg from "public/icons/blog/font-m.svg?component";
+import FontSSvg from "public/icons/blog/font-s.svg?component";
 import { onMounted, ref } from "vue";
 import { t } from "../../i18n/utils";
-
 
 const fontSize = ref("s");
 
@@ -16,10 +18,10 @@ const setFontSize = () => {
       element.classList.add("hanc-font-medium");
     } else if (fontSize.value === "m") {
       size = "l";
-      element.classList.remove("hanc-font-medium")
+      element.classList.remove("hanc-font-medium");
       element.classList.add("hanc-font-large");
     } else {
-      element.classList.remove("hanc-font-large")
+      element.classList.remove("hanc-font-large");
       size = "s";
     }
   }
@@ -46,6 +48,12 @@ onMounted(() => {
         ? t("blog.fontM")
         : t("blog.fontS")
     }}
+
+    <div class="w-[30px] h-[30px] ml-2">
+      <FontLSvg v-if="fontSize === 'l'"/>
+      <FontMSvg v-else-if="fontSize === 'm'" />
+      <FontSSvg v-else />
+    </div>
   </div>
 </template>
 

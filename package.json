@@ -41,6 +41,7 @@
     "typescript": "^5.4.2",
     "unist-util-remove": "^4.0.0",
     "unist-util-visit": "^5.0.0",
+    "vite-svg-loader": "^5.1.0",
     "vue": "^3.5.6"
   },
   "devDependencies": {
