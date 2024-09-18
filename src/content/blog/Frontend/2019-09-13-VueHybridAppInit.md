@@ -4,7 +4,6 @@ description: 誰說手機App只能使用原生語言開發呢？我們就來使�
 tags: [JavaScript, Vue, 前端]
 date:   2019-09-13 15:20:05
 category: [Frontend]
-
 ---
 
 ### 一個採用 Vue.js 、 Cordova 及 Capacitor 套件而成的 Hybrid App
@@ -24,7 +23,7 @@ $ cordova create 專案名
 $ vue create 專案名
 ```
 此時，會出現這個畫面  
-![VueMergeCor](https://scontent-tpe1-1.xx.fbcdn.net/v/t39.30808-6/455652180_122101387832477369_3630484410757963133_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=f727a1&_nc_ohc=Qc0zqLQflDwQ7kNvgHGrzxA&_nc_ht=scontent-tpe1-1.xx&oh=00_AYB3skxQ69myRArEAgt1wVg-9ETcZb-d-2udGmoRSf3XZw&oe=66C73AD3)  
+![VueMergeCor](https://github.com/hanc1027-articles/vue-cor-cap-ForExample/blob/master/src/assets/VueMergeCor.png?raw=true)  
 請選擇 *Merge* ，讓兩個專案合併  
 
 1) 設定環境  
