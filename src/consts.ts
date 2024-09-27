@@ -18,10 +18,10 @@
 export const site = {
   title: 'HanC\'s Blog',
   favicon: '/favicon.PNG',
-  description: '文字燃升溫暖，為生活點綴星空',
+  description: '文字燃升溫暖，為生活點綴星空⚝',
   author: "HanC",
   avatar: '/avatar.png',
-  motto: '文字除了記錄，還有傳遞溫暖',
+  motto: '文字除了記錄 ⚝ 還有傳遞溫暖',
   url: 'https://hanchsu.me/',
   recentBlogSize: 5,
   archivePageSize: 25,
