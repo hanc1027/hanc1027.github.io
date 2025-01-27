@@ -81,7 +81,7 @@ let tagCount = getCountByTagName(blogs);
     <div class="text-center">
       {
         Object.keys(categoryCount).length > 0 && (
-          <div>
+          <div class="mb-3">
             <i class="ri-folder-line menu-icon"/>{t('sidebar.categories')}
           </div>
         )
@@ -99,7 +99,7 @@ let tagCount = getCountByTagName(blogs);
       {
         tagArr.length > 0 && (
           <div class="divider-horizontal-mini"></div>
-          <div class="text-center">
+          <div class="text-center mb-3">
             <i class="ri-price-tag-3-line menu-icon"/>
             {t('sidebar.tags')}
           </div>
@@ -107,11 +107,16 @@ let tagCount = getCountByTagName(blogs);
       }
       {
         tagArr &&
-        tagArr.map((tag) => (
-          <div class="my-2 break-all truncate">
-            <a class="hover:text-skin-active my-2" title={tag} href={"/tags/" + tag}>{tag + " (" + tagCount[tag] + ")"}</a>
-          </div>
-        ))
+
+        <div class="grid grid-cols-3 md:grid-cols-5">
+          {
+            tagArr.map((tag) => (
+              <div class="my-2 break-all truncate col-span-1">
+                <a class="hover:text-skin-active my-2" title={tag} href={"/tags/" + tag}>{tag + " (" + tagCount[tag] + ")"}</a>
+              </div>
+            ))
+          }
+        </div>
       }
     </div>
 
