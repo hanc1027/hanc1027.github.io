@@ -161,7 +161,7 @@ menu {
 }
 
 /* 重寫markdown樣式 */
-.markdown-body {
+.markdown-body > p {
   background-color: inherit;
   /* 小 */
   font-size: 100%;
@@ -183,12 +183,12 @@ menu {
 }
 
 .markdown-body > .hanc-font-large {
-  /* 中 */
+  /* 大 */
   font-size: 150%;
 
 }
 .markdown-body.hanc-font-large  > * {
-   /* 中 */
+   /* 大 */
   font-size: 20px;
 }
 
