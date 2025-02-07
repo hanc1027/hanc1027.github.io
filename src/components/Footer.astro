@@ -1,6 +1,8 @@
 ---
 import {site, config} from "../consts";
 import {t} from '../i18n/utils'
+
+const copyrightYear = new Date().getFullYear();
 ---
 
 <div class="footer container p-4">
@@ -21,7 +23,7 @@ import {t} from '../i18n/utils'
     <div>
       <span class="cursor-default">Copyright</span>
       <i class="ri-copyright-line align-middle"></i>
-      <span class="align-middle">2025</span>
+      <span class="align-middle">{copyrightYear}</span>
     </div>
     {
       site.beian && (
