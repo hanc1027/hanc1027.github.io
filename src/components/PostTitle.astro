@@ -25,7 +25,7 @@ const mrOfIcon = 'mr-2';
       date && (
       <div class="flex items-center flex-wrap">
         <i class={`ri-calendar-2-fill ${mrOfIcon}`}/>
-        <div class="tag">{t('post.posted')}：{formatDate(date)}</div>
+        <div class="tag">{t('post.posted')}：<time datetime={new Date(date).toISOString()}>{formatDate(date)}</time></div>
         <!-- update -->
       {/* {
         lastModified && (
