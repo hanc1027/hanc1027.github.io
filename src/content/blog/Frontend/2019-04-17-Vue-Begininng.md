@@ -5,7 +5,7 @@ tags: [JavaScript, Vue, 前端]
 date:   2019-04-17 10:13:05
 updated: {{date}}
 category: [Frontend]
-image: https://github.com/hanc1027/HanC_Blog_Assets/blob/main/20190417-Vue-Begining/01.png?raw=true
+image: https://blog-image.hanchsu.me/20190417-01.png
 
 ---
 
@@ -50,7 +50,7 @@ image: https://github.com/hanc1027/HanC_Blog_Assets/blob/main/20190417-Vue-Begin
     $ code hello-word #使用Visual Studio 打開整個專案資料夾
     ```
     打開後，應該會呈這個狀態  
-    ![hello-word專案在vs code](https://github.com/hanc1027/HanC_Blog_Assets/blob/main/20190417-Vue-Begining/01.png?raw=true)  
+    ![hello-word專案在vs code](https://blog-image.hanchsu.me/20190417-01.png)  
 
 2. 了解專案架構：  
     1. node_modules:各dependencies存放的資料夾，每當我們在GIT Bash下執行 ```npm install [dependencies 的名字]```時，npm就會把我們安裝的依賴存放在這個資料夾，而此資料夾是不必存入git的追蹤的，因為它的總檔案大小太大。  

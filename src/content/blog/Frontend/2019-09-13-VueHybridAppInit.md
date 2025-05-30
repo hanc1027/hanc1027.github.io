@@ -23,7 +23,7 @@ $ cordova create 專案名
 $ vue create 專案名
 ```
 此時，會出現這個畫面  
-![VueMergeCor](https://github.com/hanc1027-articles/vue-cor-cap-ForExample/blob/master/src/assets/VueMergeCor.png?raw=true)  
+![VueMergeCor](https://blog-image.hanchsu.me/20190913-VueMergeCor.png)  
 請選擇 *Merge* ，讓兩個專案合併  
 
 1) 設定環境  
